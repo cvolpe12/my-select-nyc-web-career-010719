@@ -1,9 +1,12 @@
 def my_select(collection)
  # your code here!
  i = 0
+ select = []
  while i < collection.length
-   yield(collection[i])
+   if yield(collection[i])
+     select << collection[i]
+   end
    i += 1
  end
- collection
+ select
 end
